@@ -35,7 +35,17 @@ const Login = () => {
       baseUrl: issuer.split('/oauth2')[0],
       clientId,
       redirectUri,
-      logo: '/react.svg',
+
+      /**
+       * UpStreamPay : Changement du logo & ajout de l'authentification par Google en haut du formulaire de login
+       * Ancien logo : logo: '/react.svg',
+       */
+      logo: 'logo_upstreampay.png',
+      idps: [
+        { type: 'GOOGLE', id: '0oaaga8ihAiW9cBv45d6' },
+      ],
+      idpDisplay: 'PRIMARY',
+
       i18n: {
         en: {
           'primaryauth.title': 'Sign in to React & Company',
